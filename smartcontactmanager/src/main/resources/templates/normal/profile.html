@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Profile Page</title>
+</head>
+<body>
+<section>
+
+    <h1 class="text-center">Your Profile</h1>
+
+    <section class="">
+        <div class="card mr-4">
+            <div class="card-body">
+
+                <div class="container py-5 h-100">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col col-lg-9 mb-4 mb-lg-0">
+                            <div class="card mb-3" style="border-radius: .5rem; height: 760px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4 gradient-custom text-center text-white"
+                                         style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                                        <img th:src="@{/css/image/default.png}"
+                                             alt="Avatar" class="img-fluid my-5" style="width: 180px; height: 143px" />
+                                        <h5 style="font-size: 34px; color: black;" th:text="${user.name}">Marie Horwitz</h5>
+                                        <p style="font-size: 24px; color: black;" th:text="'ID : '+${user.id}">Web Designer</p>
+                                        <i class="far fa-edit mb-5"></i>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body p-4">
+                                            <h6>Information</h6>
+                                            <hr class="mt-0 mb-4">
+                                            <div class="row pt-1">
+                                                <div class="col-6 mb-3">
+                                                    <h6>Email</h6>
+                                                    <p class="text-muted" th:text="${user.email}">info@example.com</p>
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <h6>Role</h6>
+                                                    <p class="text-muted" th:text="${user.role}">123 456 789</p>
+                                                </div>
+                                            </div>
+                                            <h6 class="mt">More Information</h6>
+                                            <hr class="mt-0 mb-4">
+                                            <div class="row pt-1">
+                                                <div class="col-6 mb-3">
+                                                    <h6>Account Active</h6>
+                                                    <p class="text-muted" th:text="${user.enabled}">Lorem ipsum</p>
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <h6>About User</h6>
+                                                    <p class="text-muted" th:text="${user.about}">Dolor sit amet</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-start ">
+                                                <a href="#!" class="ml-3 mt-5"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
+                                                <a href="#!" class="ml-3 mt-5"><i class="fab fa-twitter fa-lg me-3"></i></a>
+                                                <a href="#!" class="ml-3 mt-5"><i class="fab fa-instagram fa-lg"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</section>
+</body>
+</html>

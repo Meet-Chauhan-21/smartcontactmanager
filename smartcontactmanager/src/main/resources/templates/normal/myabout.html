@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us - Contact Manager</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .hero-section {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        .hero-section p {
+            font-size: 1.2rem;
+        }
+        .about-section {
+            padding: 60px 20px;
+        }
+        .about-card {
+            background-color: #fff;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .about-card img {
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+        }
+        .features-section {
+            background-color: #f9f9f9;
+            padding: 60px 20px;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: #8f94fb;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container text-center">
+        <h1>Welcome to Contact Manager</h1>
+        <p>Your ultimate solution to organize, manage, and securely store your contacts in the cloud.</p>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section">
+    <div class="container">
+        <h2 class="text-center mb-5">Who We Are</h2>
+        <div class="row">
+            <div class="col-md-6 mt-5">
+                <p>
+                    Contact Manager is a user-friendly platform designed to help individuals and businesses manage their contacts
+                    effortlessly. Whether you're looking to organize your personal address book or maintain a professional client list,
+                    Contact Manager offers the tools you need to succeed.
+                </p>
+                <p>
+                    Our goal is to provide a secure, efficient, and reliable way to store and access your contacts from anywhere
+                    in the world. With features like advanced search, group management, and seamless cloud integration, we make
+                    contact management easier than ever.
+                </p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="https://img.freepik.com/free-vector/flat-design-illustration-customer-support_23-2148887720.jpg?size=338&ext=jpg&ga=GA1.1.1887574231.1729468800&semt=ais_hybrid" alt="About Us Image" style="height: 300px; width:400px; border-radius:10px;" class="img-fluid ">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section mt-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Why Choose Us?</h2>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <i class="fas fa-lock fa-3x text-primary mb-3"></i>
+                <h5>Data Security</h5>
+                <p>Your privacy is our priority. All data is encrypted and stored securely.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fas fa-cloud fa-3x text-primary mb-3"></i>
+                <h5>Cloud-Based Access</h5>
+                <p>Access your contacts from anywhere, on any device, with real-time updates.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                <h5>User-Friendly Interface</h5>
+                <p>Manage your contacts with an intuitive, easy-to-navigate interface.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Meet Our Team Section -->
+<section class="about-section">
+    <div class="container">
+        <h2 class="text-center mb-5">Meet Our Team</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="about-card p-4">
+                    <img style="height: 100px; width:100px; border-radius:50%;" src="https://www.corporatephotographerslondon.com/wp-content/uploads/2021/07/London-photographer-studio.jpg" alt="Team Member" class="img-fluid mb-3">
+                    <h5>parth patel</h5>
+                    <p>Founder & CEO</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="about-card p-4">
+                    <img style="height: 100px; width:100px; border-radius:50%;" src="https://imgcdn.stablediffusionweb.com/2024/10/29/a450d65f-b789-416c-945a-4f2d19a15d23.jpg" alt="Team Member" class="img-fluid mb-3">
+                    <h5>Jane Smith</h5>
+                    <p>Lead Developer</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="about-card p-4">
+                    <img style="height: 100px; width:100px; border-radius:50%;" src="https://d2v5dzhdg4zhx3.cloudfront.net/web-assets/images/storypages/short/linkedin-profile-picture-maker/dummy_image/thumb/004.webp" alt="Team Member" class="img-fluid mb-3">
+                    <h5>twishya jain</h5>
+                    <p>UI/UX Designer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>© 2025 Contact Manager. All Rights Reserved. <a href="#">Privacy Policy</a></p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

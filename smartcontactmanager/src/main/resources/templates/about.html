@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>About Us - Smart Contact Manager</title>
+    <style>
+
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-top: 0px;
+        }
+        .features-section {
+            padding: 40px 20px;
+        }
+        .team-section {
+            background-color: #f9f9f9;
+            padding: 60px 20px;
+        }
+        .team-card img {
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: #8f94fb;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+
+<section>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+
+        <a class="navbar-brand" href="#">Smart Contect Manger</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav ml-auto text-uppercase">
+
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/}" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/about}" href="#">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/signin}" href="#" tabindex="-1" aria-disabled="true">Login</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/signup}" href="#" tabindex="-1" aria-disabled="true">SignUp</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <div class="colm bg-warning">
+
+<section class="hero-section">
+    <div class="container">
+        <h1>Welcome to Smart Contact Manager</h1>
+        <p class="lead">Your one-stop solution to organize, manage, and securely store your contacts.</p>
+    </div>
+</section>
+</div>
+
+<!-- About Section -->
+<section class="features-section">
+    <div class="container">
+        <h2 class="text-center mb-4">Why Choose Smart Contact Manager?</h2>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <i class="fas fa-lock fa-3x text-primary mb-3"></i>
+                <h5>Secure & Private</h5>
+                <p>Your data is encrypted and stored securely. Only you have access to your contacts.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fas fa-user-cog fa-3x text-primary mb-3"></i>
+                <h5>Easy to Manage</h5>
+                <p>Add, edit, and organize your contacts with an intuitive and user-friendly interface.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fas fa-cloud fa-3x text-primary mb-3"></i>
+                <h5>Cloud Integration</h5>
+                <p>Access your contacts anytime, anywhere with seamless cloud synchronization.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Key Features</h2>
+        <ul class="list-group">
+            <li class="list-group-item">✔ Advanced Search Functionality</li>
+            <li class="list-group-item">✔ Real-Time Contact Updates</li>
+            <li class="list-group-item">✔ Group Management for Teams</li>
+            <li class="list-group-item">✔ Import/Export Contacts Easily</li>
+            <li class="list-group-item">✔ Activity Logs for Enhanced Tracking</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="team-section">
+    <div class="container">
+        <h2 class="text-center mb-4">Meet Our Team</h2>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="team-card">
+                    <img src="https://www.corporatephotographerslondon.com/wp-content/uploads/2021/07/London-photographer-studio.jpg" alt="Team Member" class="img-fluid mb-3">
+                    <h5>parth patel</h5>
+                    <p>Founder & CEO</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="team-card">
+                    <img src="https://imgcdn.stablediffusionweb.com/2024/10/29/a450d65f-b789-416c-945a-4f2d19a15d23.jpg" alt="Team Member" class="img-fluid mb-3">
+                    <h5>Jane Smith</h5>
+                    <p>Lead Developer</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="team-card">
+                    <img src="https://d2v5dzhdg4zhx3.cloudfront.net/web-assets/images/storypages/short/linkedin-profile-picture-maker/dummy_image/thumb/004.webp" alt="Team Member" class="img-fluid mb-3">
+                    <h5>twishya jain</h5>
+                    <p>UI/UX Designer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Us Section -->
+<section class="features-section">
+    <div class="container">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <p class="text-center">Have questions or need support? Reach out to us:</p>
+        <ul class="list-unstyled text-center">
+            <li>Email: support@smartcontactmanager.com</li>
+            <li>Phone: +1 234 567 890</li>
+            <li>Address: 228, Kamraj, Surat City, Gujrat.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>© 2025 Smart Contact Manager. All Rights Reserved. <a href="#">Privacy Policy</a></p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</section>
+</body>
+</html>
