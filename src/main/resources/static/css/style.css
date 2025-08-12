@@ -1,0 +1,142 @@
+body{
+    background: #e2e2e2e2;
+}
+.banner{
+    width: 100%;
+    height: 93vh;
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(../css/image/talking_lady.png);
+    background-size: cover;
+    color: white;
+}
+.m{
+    padding-left: 70px;
+    padding-bottom: 60px;
+}
+.my-card{
+    padding: 30px;
+    background: white;
+}
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+
+/* style sidebar */
+
+@media only screen and (max-width: 600px){
+    .sidebar{
+        display: none;
+        width: 80% !important;
+        height: 100vh;
+        background: white;
+        position: fixed;
+        padding-top: 20px;
+    }
+    .content{
+        margin-left: 0% !important;
+    }
+}
+
+.sidebar{
+    width: 20%;
+    height: 100%;
+    background: white;
+    position: fixed;
+    padding-top: 45px;
+    z-index: 9999999999999999999999;
+}
+
+.sidebar a{
+    display: block;
+    width: 100%;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: black;
+
+}
+
+.sidebar a:hover{
+    background: #e2e2e2;
+}
+
+.sidebar .divider{
+    height: 0.5px;
+    width: 100%;
+    background: #e2e2e2;
+    margin-top: 10px;
+
+}
+
+.content{
+    margin-left: 22%;
+    transition: margin-left 0.7s ease;
+}
+
+.sidebar .crossBtn{
+    position: absolute;
+    top: 0;
+    right: 28px;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+
+
+/* Add contact Animation */
+
+ @keyframes slideIn {
+        from {
+            transform: translateX(50%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+}
+
+.animated-card {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.my_profile_picture{
+    height: 33px;
+    width: 33px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+
+.gradient-custom {
+/* fallback for old browsers */
+background: #f6d365;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
+}
+
+
+/* Search Bar Style */
+
+.search-container{
+    position: relative;
+}
+
+.search-result{
+    position: absolute;
+    background: white;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gray;
+    display: none;
+
+
+}

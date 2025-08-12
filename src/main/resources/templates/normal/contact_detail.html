@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Detail Page</title>
+</head>
+<body>
+<section>
+
+    <h1 class="text-center">Contact Detail</h1>
+
+    <div class="card mx-4 mt-4 mb-5 animated-card">
+        <div class="card-body" th:if="${contact}">
+            <div class="button text-right">
+                <button th:onclick="|deleteContact(${contact.cId})|" style="width:60px; height:40px; margin-right:10px;" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
+
+                <form method="post" th:action="@{'/user/update-contact/'+${contact.cId}}" class="mt-2">
+                    <button style="width:60px; height:40px; margin-right:10px;" class="btn btn-warning btn-sm"><i class="fa-solid fa-marker"></i></button>
+                </form>
+            </div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Profile Image -->
+                    <div class="col-lg-4 col-md-5 col-sm-12 text-center mb-3 mb-lg-0">
+                        <img
+                                src=""
+                                style="margin-bottom:30px; margin-top:20px ;height: 320px; width: 320px; border-radius: 50%; box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.5);"
+                                class="my_profile_picture"
+                                th:src="@{'/css/image/'+${contact.image}}"
+                                alt="profile picture">
+                    </div>
+
+                    <!-- Contact Details Table -->
+                    <div class="col-lg-8 col-md-7 col-sm-12" style="border: 2px solid black; padding: 15px; border-radius: 10px;">
+                        <h2 class="pb-3"><span th:text="${contact.name}"></span> ( <span th:text="${contact.secondName}"></span> )</h2>
+
+                        <table class="table table-bordered table-hover">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">#Id</th>
+                                <th scope="col"><span th:text="${contact.cId}"></span></th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">Email</th>
+                                <td><span th:text="${contact.email}"></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Phone</th>
+                                <td><span th:text="${contact.phone}"></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Work</th>
+                                <td><span th:text="${contact.work}"></span></td>
+                            </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <h2  class="ml-5" style="font-weight: bold;">Description :</h2>
+                    <br>
+                    <br>
+                    <span class="ml-4 mr-3" th:utext="${contact.discription}"></span>
+                </div>
+            </div>
+        </div>
+
+        <h2 th:unless="${contact}" class="text-center p-5 bg-warning"><i class="fa-regular fa-circle-xmark"></i> You Don't have permission to see this contact..!</h2>
+
+    </div>
+
+
+</section>
+</body>
+</html>
